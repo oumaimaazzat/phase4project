@@ -36801,3 +36801,10 @@ Processing by Api::V1::TracksController#top_100 as */*
 Completed 200 OK in 5830ms (Views: 19.1ms | Allocations: 189330)
 
 
+Started GET "/api/v1/tracks/top_100" for ::1 at 2021-03-31 13:36:27 -0500
+  [1m[35m (41.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::TracksController#top_100 as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (25.94ms)
+Completed 200 OK in 6999ms (Views: 51.0ms | ActiveRecord: 7.4ms | Allocations: 199062)
+
+
