@@ -27,8 +27,15 @@ var hash = window.location.hash
   }, {});
 window.location.hash = "";
 class App extends Component {
+
   state = {
-    login: ""
+    view: "login"
+  }
+
+  changeToHome= () => {
+    this.setState({
+      view: "Home"
+    })
   }
     
   
@@ -36,7 +43,8 @@ class App extends Component {
 
     return (
       <div>
-        <HomePage />
+        {this.state.view === "login" ? <LoginPg changeToHome={this.changeToHome}/> : null}
+        {this.state.home === "Home" ? <HomePage /> : null}
       </div>
 //       <div className="App">
 //         <HomePage />

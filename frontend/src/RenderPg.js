@@ -17,7 +17,7 @@ render() {
             
           
         </div>
-    )
-}
+        )
+    }
 }
 export default RenderPg
