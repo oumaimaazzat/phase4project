@@ -14,6 +14,7 @@ const scopes = [
 ];
 // Get the hash of the url
 
+
 var hash = window.location.hash
   .substring(1)
   .split("&")
