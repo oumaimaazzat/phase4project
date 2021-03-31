@@ -5,6 +5,7 @@ import HomePage from './HomePage'
 import LoginPg from './LoginPg'
 import LoginForm from './LoginForm'
 import SignupForm from './SignupForm'
+import Navbar from './navbar.js'
 // import React from "react";
 import ReactDOM from "react-dom";
 // import LoginPage from './LoginPage'
@@ -68,7 +69,10 @@ fetch(redirectUri)
   render() {
 
     return (
+      
       <div>
+        <Navbar SignupForm={this.changeToSignupForm} LoginForm={this.changeToLoginForm} changeToHome={this.changeToHome} />
+
         {this.state.view === "login" ? <LoginPg SignupForm={this.changeToSignupForm} LoginForm={this.changeToLoginForm} changeToHome={this.changeToHome} playlists={this.state.playlists} /> : null}
         {this.state.view === "Home" ? <HomePage playlists={this.state.playlists}/> : null}
         {this.state.view === "LoginForm" ? <LoginForm /> : null }
