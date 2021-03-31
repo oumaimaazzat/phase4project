@@ -13,7 +13,6 @@ const scopes = [
 ];
 // Get the hash of the url
 
-const test = "http://localhost:3000/api/v1/tracks/top_100"
 
 var hash = window.location.hash
   .substring(1)
