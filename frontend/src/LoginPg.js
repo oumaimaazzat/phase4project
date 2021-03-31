@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import RenderPg from './RenderPg'
 import { Container } from "reactstrap";
 import HomePage from './HomePage'
-import LoginForm from './LoginForm'
+
 const redirectUri = "http://localhost:3000/api/v1/tracks/top_100";
 // import assets from "./src/assets";
 
@@ -32,10 +32,10 @@ render() {
                 <div className="filter" />
 
                 <div class="topnav">
-                    <a href="#news">Listen</a>
+                    <a onClick={this.props.changeToHome}>Listen</a>
                     <a>|</a>
-                    <a >Sign up</a>
-                    <a >Log in</a>
+                    <a onClick={this.props.SignupForm}>Sign up</a>
+                    <a onClick={this.props.LoginForm}>Log in</a>
                     
                 </div>
                 <div className="content-center">

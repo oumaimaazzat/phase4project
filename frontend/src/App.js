@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import "./App.css";
 import HomePage from './HomePage'
 import LoginPg from './LoginPg'
+import LoginForm from './LoginForm'
+import SignupForm from './SignupForm'
 // import React from "react";
 import ReactDOM from "react-dom";
 // import LoginPage from './LoginPage'
@@ -48,36 +50,32 @@ fetch(redirectUri)
       view: "Home"
     })
   }
+  changeToLoginForm = () => {
+    this.setState({
+      view: "LoginForm"
+    })
+  }
+
+  changeToSignupForm = () => {
+    this.setState({
+      view: "SignupForm"
+    })
+  }
+
+  
     
   
   render() {
 
     return (
       <div>
-        {this.state.view === "login" ? <LoginPg changeToHome={this.changeToHome} playlists={this.state.playlists} /> : null}
-        {this.state.home === "Home" ? <HomePage playlists={this.state.playlists}/> : null}
+        {this.state.view === "login" ? <LoginPg SignupForm={this.changeToSignupForm} LoginForm={this.changeToLoginForm} changeToHome={this.changeToHome} playlists={this.state.playlists} /> : null}
+        {this.state.view === "Home" ? <HomePage playlists={this.state.playlists}/> : null}
+        {this.state.view === "LoginForm" ? <LoginForm /> : null }
+        {this.state.view === "SignupForm" ? <SignupForm /> : null}
+        
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-      <div className="App">
-        <h1>Hello!! {this.state.name}</h1>
-        <a href="javascript:;">
-          Open Modal
-        </a>
-      </div>
-    );
+    
  
 
 
