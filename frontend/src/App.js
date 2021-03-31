@@ -71,13 +71,13 @@ fetch(redirectUri)
 
 
   
-      <div className="App">
+      {/* <div className="App">
         <h1>Hello!! {this.state.name}</h1>
         <a href="javascript:;">
           Open Modal
         </a>
       </div>
-    );
+    ); */}
  
 
 

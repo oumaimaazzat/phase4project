@@ -36499,3 +36499,28 @@ Processing by Api::V1::TracksController#top_100 as */*
 Completed 200 OK in 8090ms (Views: 29.5ms | Allocations: 189539)
 
 
+Started GET "/api/v1/tracks/top_100" for ::1 at 2021-03-31 12:44:05 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::TracksController#top_100 as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.63ms)
+Completed 200 OK in 6003ms (Views: 31.9ms | ActiveRecord: 12.4ms | Allocations: 200744)
+
+
+Started GET "/api/v1/tracks/top_100" for ::1 at 2021-03-31 12:45:31 -0400
+Processing by Api::V1::TracksController#top_100 as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.6ms)
+Completed 200 OK in 6076ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 187995)
+
+
+Started GET "/api/v1/tracks/top_100" for ::1 at 2021-03-31 12:46:00 -0400
+Processing by Api::V1::TracksController#top_100 as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.62ms)
+Completed 200 OK in 5850ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 190683)
+
+
+Started GET "/api/v1/tracks/top_100" for ::1 at 2021-03-31 12:46:21 -0400
+Processing by Api::V1::TracksController#top_100 as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (13.28ms)
+Completed 200 OK in 5795ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 189749)
+
+

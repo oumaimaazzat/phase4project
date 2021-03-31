@@ -42,10 +42,9 @@ render() {
                 <div className="filter" />
 
                 <div class="topnav">
-                    <a href="#news">Listen</a>
-                    <a href="#about">|</a>
-                    <a href="#contact">Sign up</a>
-                    <a href="#about">Log in</a>
+                    <a href="#listen">Listen</a>
+                    <a href="#signup">Sign up</a>
+                    <a href="#login">Log in</a>
                     
                 </div>
                 <div className="content-center">
