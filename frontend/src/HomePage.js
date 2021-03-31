@@ -25,13 +25,13 @@ render() {
             <div className="allSongs">
             {this.state.playlists.map(song => <RenderPg song={song} key={song.id}/>)}
             </div>
-          <div className="jumbotron bg-secondary text-center text-danger">
+          {/* <div className="jumbotron bg-secondary text-center text-danger">
             <div className="container">
                 <div className="ht-tm-header">
                     <h1 className="display-1 display-xxl text-uppercase">MZC</h1>
-                    <span className="lead">A place you can discover new music</span>
+                    <span className="lead">A place you can discover new music</span> */}
         
-                    <div className="mt-4">
+                    {/* <div className="mt-4">
                         <button onClick={console.log("Button1")} className="btn btn-danger btn-lg m-2 text-secondary">
                             <span>Login In</span>
                         </button>
@@ -41,11 +41,11 @@ render() {
                         </button>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> */}
+        {/* // </div> */}
         
     
-    /////////////////////////////////////////////////////////
+   
               <div
                 className="background"
               >
