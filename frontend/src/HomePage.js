@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import RenderPg from './RenderPg'
 const redirectUri = "http://localhost:3000/api/v1/tracks/top_100";
 
 class HomePage extends Component {
@@ -15,8 +16,12 @@ componentDidMount(){
   }
 
 render() {
-    
+   
     return (
+        <div>
+            <div className="allSongs">
+            {this.state.playlists.map(song => <RenderPg song={song} key={song.id}/>)}
+            </div>
           <div className="jumbotron bg-secondary text-center text-danger">
             <div className="container">
                 <div className="ht-tm-header">
@@ -34,6 +39,7 @@ render() {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

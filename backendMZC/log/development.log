@@ -34991,3 +34991,16 @@ puma (5.2.2) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
 puma (5.2.2) lib/puma/request.rb:75:in `handle_request'
 puma (5.2.2) lib/puma/server.rb:431:in `process_client'
 puma (5.2.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/api/v1/tracks/top_100" for ::1 at 2021-03-31 01:11:18 -0500
+  [1m[35m (42.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::TracksController#top_100 as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (37.52ms)
+Completed 200 OK in 7103ms (Views: 61.1ms | ActiveRecord: 7.5ms | Allocations: 201735)
+
+
+Started GET "/api/v1/tracks/top_100" for ::1 at 2021-03-31 01:12:57 -0500
+Processing by Api::V1::TracksController#top_100 as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (38.1ms)
+Completed 200 OK in 7278ms (Views: 47.2ms | ActiveRecord: 0.0ms | Allocations: 187730)
+
+

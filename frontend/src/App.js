@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 // import hash from "./hash";
-import logo from "./logo.svg";
 import "./App.css";
 import HomePage from './HomePage'
+import LoginPg from './LoginPg'
+// import LoginPage from './LoginPage'
 export const authEndpoint = 'https://accounts.spotify.com/authorize';
 // Replace with your app's client ID, redirect URI and desired scopes
 const clientId = "24689acf4f524b839fec14ae0fb0e0cf";
-const redirectUri = "http://localhost:3002/";
+// const redirectUri = "http://localhost:3002/";
 const scopes = [
   "user-read-currently-playing",
   "user-read-playback-state",
@@ -26,24 +27,10 @@ var hash = window.location.hash
 window.location.hash = "";
 class App extends Component {
   state = {
-    tracks: [],
-    allPlaylists: []
+    login: ""
   }
-  componentDidMount() {
-    // // Set token
-    // let _token = hash.access_token;
-    // if (_token) {
-    //   // Set token
-    //   this.setState({
-    //     token: _token
-      // });
-      fetch("http://localhost:3000/api/v1/tracks/top_100")
-      .then(res => res.json())
-      .then(tracks => {
-        this.setState({tracks: tracks})
-      })
     
-  }
+  
   render() {
 
     return (
