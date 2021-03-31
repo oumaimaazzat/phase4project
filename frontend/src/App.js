@@ -3,11 +3,13 @@ import React, { Component } from "react";
 import "./App.css";
 import HomePage from './HomePage'
 import LoginPg from './LoginPg'
+// import React from "react";
+import ReactDOM from "react-dom";
 // import LoginPage from './LoginPage'
 export const authEndpoint = 'https://accounts.spotify.com/authorize';
 // Replace with your app's client ID, redirect URI and desired scopes
 const clientId = "24689acf4f524b839fec14ae0fb0e0cf";
-// const redirectUri = "http://localhost:3002/";
+const redirectUri = "http://localhost:3000/api/v1/tracks/top_100";
 const scopes = [
   "user-read-currently-playing",
   "user-read-playback-state",
@@ -29,8 +31,17 @@ window.location.hash = "";
 class App extends Component {
 
   state = {
-    view: "login"
+    view: "login",
+    playlists: []
   }
+
+
+componentDidMount(){
+fetch(redirectUri)
+.then(res => res.json())
+.then(playlists => this.setState({ playlists }))
+}
+
 
   changeToHome= () => {
     this.setState({
@@ -43,8 +54,35 @@ class App extends Component {
 
     return (
       <div>
-        {this.state.view === "login" ? <LoginPg changeToHome={this.changeToHome}/> : null}
-        {this.state.home === "Home" ? <HomePage /> : null}
+        {this.state.view === "login" ? <LoginPg changeToHome={this.changeToHome} playlists={this.state.playlists} /> : null}
+        {this.state.home === "Home" ? <HomePage playlists={this.state.playlists}/> : null}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+      <div className="App">
+        <h1>Hello!! {this.state.name}</h1>
+        <a href="javascript:;">
+          Open Modal
+        </a>
+      </div>
+    );
+ 
+
+
+
+
       </div>
 //       <div className="App">
 //         <HomePage />
