@@ -16,6 +16,9 @@ render() {
             {this.props.playlists.map(song => <RenderPg song={song} key={song.id}/>)}
             </div>
 
+{/* <div className="allSongs">
+            {this.state.playlists.map(song => <RenderPg song={song} key={song.id}/>)}
+            </div> */}
         </div>
             
           );
